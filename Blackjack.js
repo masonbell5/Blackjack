@@ -16,3 +16,4 @@ let cardToValue = {
  'Queen': 10,
  'King': 10
 };
+

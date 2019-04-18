@@ -5,4 +5,6 @@
   border: 5px black solid;
       display: flex;
       border-collapse: collapse;
+      display: flex;
+      border-collapse: collapse;
 }
