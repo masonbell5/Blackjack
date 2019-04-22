@@ -22,4 +22,5 @@ body {
   background-repeat: no-repeat;
         width:1920px; /* you can use % */
     height: auto;
+    text-align: center;
 }

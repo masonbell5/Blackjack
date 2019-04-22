@@ -1,9 +1,12 @@
 <html>
+    <body>
     <head><link rel = "stylesheet" type ="text/css" href="Blackjack.css"></head>
     <h1 id='header' align="center">BlackJack Da Game</h1>
-    <p id='paragraph' align="center">Press "New Game" To Begin</p>
     <p id='counter'></p>
     <p id='playerhand'></p>
+        <button id='newgame' onClick=createDeck() align="center">New Game</button>
+    <button id='hit' onClick=getNextCard() align="center">Hit</button>
+    <button id='stay' align="center">Stay</button>
     <script type ="text/javascript" src="Blackjack.js"></script>
   </body>
 </html>
