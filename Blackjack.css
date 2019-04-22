@@ -1,25 +1,24 @@
-#container {
-  position: relative;
-  width: 1880px;
-  height: 900px;
-  border: 5px black solid;
-      display: flex;
-      border-collapse: collapse;
-      display: flex;
-      border-collapse: collapse;
-}
+
 
 #header {
-   	font-size: 104px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
+   	font-size: 80px;
     color: rgb(226, 226, 226);
+       font-family: '8BITWONDERNominal';
+   font-weight: normal;
+   font-style: normal;
+}
+#subhead {
+   	font-size: 25px;
+    color: rgb(226, 226, 226);
+       font-family: '8BITWONDERNominal';
+   font-weight: normal;
+   font-style: normal;
 }
 body {
   background-image: url("https://cdnb.artstation.com/p/assets/images/images/004/661/885/original/daniel-lugo-background-china.gif?1485367948");
   background-repeat: no-repeat;
         width:1920px; /* you can use % */
     height: auto;
+          display: flex;
+
 }
