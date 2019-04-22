@@ -1,12 +1,14 @@
 <html>
     <head><link rel = "stylesheet" type ="text/css" href="Blackjack.css"></head>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
-  <body>
+  <body align='center'>
     <h1 id='header' align="center">BlackJack</h1>
-    <h2 id='subhead' align="center">Press "Start" To Begin</h2>
+    <h2 id='subhead' align="center">Press "New Game" To Begin</h2>
     <p id='counter'></p>
     <p id='playerhand'></p>
+    <button id='newgame' onClick=createDeck()>New Game</button>
+    <button id='hit' onClick=getNextCard()>Hit</button>
+    <button id='stay'>Stay</button>
     <script type ="text/javascript" src="Blackjack.js"></script>
   </body>
 </html>
-
