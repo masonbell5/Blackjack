@@ -1,6 +1,5 @@
 let header = document.getElementById('header');
 let paragraph = document.getElementById('paragraph');
-let newgame = document.getElementById('newgame');
 let hit = document.getElementById('hit');
 let stay = document.getElementById('stay');
 let counter = document.getElementById('counter');
