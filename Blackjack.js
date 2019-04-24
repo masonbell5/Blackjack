@@ -1,33 +1,15 @@
+let newgame = document.getElementById('newgame');
+let hit = document.getElementById('hit');
+let stay = document.getElementById('stay');
+let counter = document.getElementById('counter');
+let loadPlayerHand = document.getElementById('playerhand');
+
+
+let deck = [];
 let playerHand = [];
 let cardCounter = 0;
-
-let suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
-let values = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
-
-function createDeck() {
-  hit.style.display = 'block';
-  stay.style.display = 'block';
-  paragraph.innerText = 'Do you hit or stay?';
-  deck = [];
-
-  for(let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
-    for(let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-      let card = {
-        suit: suits[suitIdx],
-        value: values[valueIdx]
-      };
-      deck.push(card);
-    }
-  }
-  shuffle();
-  getNextCard();
-  getNextCard();
-  return deck;
-}
-
-function getNextCard() {
-  let cardToValue = {
- 'Ace': 1,
+let cardToValue = {
+ 'Ace': 2,
  'Two': 2,
  'Three': 3,
  'Four': 4,
@@ -41,6 +23,31 @@ function getNextCard() {
  'Queen': 10,
  'King': 10
 };
+
+let suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
+let values = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
+
+function createDeck() {
+  newgame.style.display = 'none';
+  paragraph.innerText = 'Do you hit or stay?';
+  deck = [];
+
+  for(let suitId = 0; suitId < suits.length; suitId++) {
+    for(let valueId = 0; valueId < values.length; valueId++) {
+      let card = {
+        suit: suits[suitId],
+        value: values[valueId]
+      };
+      deck.push(card);
+    }
+  }
+  shuffle();
+  getNextCard();
+  getNextCard();
+  return deck;
+}
+
+function getNextCard() {
   let currentCardValue = deck[deck.length - 1].value;
   playerHand.push(deck[deck.length - 1].value + ' of ' + deck[deck.length - 1].suit);
   cardCounter = cardCounter + cardToValue[currentCardValue];
@@ -54,6 +61,7 @@ function getNextCard() {
     paragraph.innerText = 'YOU WIN!';
     counter.style.color = 'green';
   }
+  return playerHand;
 }
 
 function shuffle() {
