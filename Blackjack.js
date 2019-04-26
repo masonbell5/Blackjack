@@ -4,25 +4,7 @@ let stay = document.getElementById('stay');
 let counter = document.getElementById('counter');
 let loadPlayerHand = document.getElementById('playerhand');
 
-
-let deck = [];
-let playerHand = [];
-let cardCounter = 0;
-let cardToValue = {
- 'Ace': 2,
- 'Two': 2,
- 'Three': 3,
- 'Four': 4,
- 'Five': 5,
- 'Six': 6,
- 'Seven': 7,
- 'Eight': 8,
- 'Nine': 9,
- 'Ten': 10,
- 'Jack': 10,
- 'Queen': 10,
- 'King': 10
-};
+let cardToValue = {'Ace': 2,'Two': 2,'Three': 3,'Four': 4,'Five': 5,'Six': 6,'Seven': 7,'Eight': 8,'Nine': 9,'Ten': 10,'Jack': 10,'Queen': 10,'King': 10};
 
 let suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
 let values = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
@@ -31,6 +13,8 @@ function createDeck() {
   newgame.style.display = 'none';
   paragraph.innerText = 'Do you hit or stay?';
   deck = [];
+  hit.style.display = 'block';
+  stay.style.display = 'block';
 
   for(let suitId = 0; suitId < suits.length; suitId++) {
     for(let valueId = 0; valueId < values.length; valueId++) {
@@ -52,16 +36,41 @@ function getNextCard() {
   playerHand.push(deck[deck.length - 1].value + ' of ' + deck[deck.length - 1].suit);
   cardCounter = cardCounter + cardToValue[currentCardValue];
   deck.pop();
+  paragraph.style.color = 'white';
+  counter.style.color = 'white';
+  loadPlayerHand.style.color = 'white';
+
   counter.innerText = 'The sum of your cards is: ' + cardCounter;
   loadPlayerHand.innerText = 'Cards you have: ' + playerHand.join(', ');
   if (cardCounter > 21) {
     paragraph.innerText = 'YOU LOSE!';
     counter.style.color = 'red';
+    playAgain();
   } if (cardCounter === 21) {
     paragraph.innerText = 'YOU WIN!';
     counter.style.color = 'green';
+    playAgain();
   }
   return playerHand;
+}
+
+function restartGame() {
+  paragraph.innerText = '';
+  newgame.style.display = 'none';
+  counter.innerText = 'none';
+  loadPlayerHand.innerText = '';
+  cardCounter = 0;
+  deck = [];
+  playerHand = [];
+  createDeck();
+}
+
+function playAgain() {
+  hit.style.display = 'none';
+  stay.style.display = 'none';
+  paragraph.innerText = 'Click "Start" to play again'
+  newgame.style.display = '';
+  restartGame;
 }
 
 function shuffle() {

@@ -19,5 +19,8 @@ body {
   background-repeat: no-repeat;
         width:1920px;
     height: auto;
+}
 
-
+ #paragraph {
+    color: white;
+  }
