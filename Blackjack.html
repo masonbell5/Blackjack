@@ -1,13 +1,20 @@
 <html>
-    <body align='center'>
-    <head><link rel = "stylesheet" type ="text/css" href="Blackjack.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/></head>
-  <body align='center'>
-    <h1 id='header' align="center">BlackJack</h1>
-    <p id='counter'></p>
-    <p id='playerhand'></p>
-    <button id='hit' onClick=getNextCard()>Hit</button>
-    <button id='stay'>Stay</button>
-    <script type ="text/javascript" src="Blackjack.js"></script>
+<body align='center'>
+     <head><link rel = "stylesheet" type ="text/css" href="Blackjack.css"></head>
+  <link rel='stylesheet' media='screen' href='https://fontlibrary.org/face/8bit-wonder' type='text/css' />
+  <u style="color:white"><h1 id='header' align='center'>BlackJack</h1></u>
+  <p id='paragraph' align='center'>Press 'Start' to begin</p>
+  <p id='counter'></p>
+  <p id='playerhand'></p>
+   <button id='newgame' onClick=restartGame() align='center'>Start</button>
+  <div align='center'>
+  <button id='hit' onClick=getNextCard() align='center'>Hit</button>
+  <button id='stay' align='center'>Stay</button>
+  </div>
+   <p id='pot'>Pot: + "totalBet"<p>
+  <button id='bet' align='center'>Bet</button>
+        <input type="text" id="bet" name="Bet">
+  <script type="text/javascript" src="Blackjack.js"></script>
 </body>
 </html>
+
