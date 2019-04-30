@@ -1,15 +1,15 @@
 #header {
-   	font-size: 80px;
-    color: rgb(226, 226, 226);
-       font-family: '8BITWONDERNominal';
+   font-size: 80px;
+   color: rgb(226, 226, 226);
+   font-family: '8BITWONDERNominal';
    font-weight: normal;
    font-style: normal;
 }
 
 #subhead {
-   	font-size: 25px;
-    color: rgb(226, 226, 226);
-       font-family: '8BITWONDERNominal';
+   font-size: 25px;
+   color: rgb(226, 226, 226);
+   font-family: '8BITWONDERNominal';
    font-weight: normal;
    font-style: normal;
 }
@@ -17,44 +17,43 @@
 body {
   background-image: url("https://cdnb.artstation.com/p/assets/images/images/004/661/885/original/daniel-lugo-background-china.gif?1485367948");
   background-repeat: no-repeat;
-        width:1920px;
-    height: auto;
-     font-family: '8BITWONDERNominal';
+  width:1920px;
+  height: auto;
+  font-family: '8BITWONDERNominal';
 }
 
  #paragraph {
     color: white;
-      font-family: '8BITWONDERNominal';
+    font-family: '8BITWONDERNominal';
   }
 
 #newgame {
-    background-color: #298708;
+  background-color: #298708;
   color: white;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-     font-family: '8BITWONDERNominal';
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: '8BITWONDERNominal';
 }
 #hit {
-    background-color: #298708;
+  background-color: #298708;
   color: white;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-     font-family: '8BITWONDERNominal';
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: '8BITWONDERNominal';
 }
 #stay {
-    background-color: #298708;
+  background-color: #298708;
   color: white;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-     font-family: '8BITWONDERNominal';
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: '8BITWONDERNominal';
 }
-
