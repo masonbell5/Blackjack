@@ -1,12 +1,12 @@
 let newgame = document.getElementById('newgame');
 let hit = document.getElementById('hit');
-let stay = document.getElementById('stay');
+let restart = document.getElementById('restart');
 let counter = document.getElementById('counter');
 let loadPlayerHand = document.getElementById('playerhand');
 
 
 let cardToValue = {
- 'Ace': 2,
+ 'Ace': 1,
  'Two': 2,
  'Three': 3,
  'Four': 4,
@@ -26,10 +26,10 @@ let values = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'N
 
 function createDeck() {
   newgame.style.display = 'none';
-  paragraph.innerText = 'Do you hit or stay?';
+  paragraph.innerText = 'Do you hit or restart?';
   deck = [];
   hit.style.display = 'block';
-  stay.style.display = 'block';
+  restart.style.display = 'block';
 
   for(let suitId = 0; suitId < suits.length; suitId++) {
     for(let valueId = 0; valueId < values.length; valueId++) {
@@ -82,7 +82,7 @@ function restartGame() {
 
 function playAgain() {
   hit.style.display = 'none';
-  stay.style.display = 'none';
+  restart.style.display = 'none';
   paragraph.innerText = 'Click "Start" to play again'
   newgame.style.display = '';
   restartGame;
